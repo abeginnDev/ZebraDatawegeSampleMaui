@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="scannerwerWithIntent.MainPage"
+             xmlns:model="clr-namespace:scannerwerWithIntent.model">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text="Hello, Zebra!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label Text="This is a sample scanner app. Click on Refresh To show new scanned text"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="This is a sample scanner app. Click on Refresh To show new scanned text"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Refresh"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+            <Label x:Name="ScannerText"
+                   Text="{Binding scannedText }"
+                   BackgroundColor="Aqua" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
